@@ -1,19 +1,19 @@
 class UsersController < ApplicationController
   def index
 
-    # # TWITTER GEM METHOD
-    # client = Twitter::REST::Client.new do |config|
-    #   config.consumer_key        = ENV['TWITTER_KEY']
-    #   config.consumer_secret     = ENV['TWITTER_SECRET']
-    #   config.access_token        = ENV['TWITTER_TOKEN']
-    #   config.access_token_secret = ENV['TWITTER_TOKEN_SECRET']
-    # end
+    # TWITTER API CALL 
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV['TWITTER_KEY']
+      config.consumer_secret     = ENV['TWITTER_SECRET']
+      config.access_token        = ENV['TWITTER_TOKEN']
+      config.access_token_secret = ENV['TWITTER_TOKEN_SECRET']
+    end
 
-    # @results = client.search("#coffee -rt", :lang => "en")
+    @twitter_results = client.search("#coffee -rt", :lang => "en")
 
-    # p @results
+    p @twitter_results
 
-    # INSTAGRAM 
+    # INSTAGRAM API CALL
     @tag = params[:tag]
 
     @token = ENV['INSTAGRAM_TOKEN']
