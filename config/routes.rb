@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get '/search', to: 'users#show'
 
 end
 
@@ -27,3 +28,4 @@ end
 #           PATCH  /users/:id(.:format)      users#update
 #           PUT    /users/:id(.:format)      users#update
 #           DELETE /users/:id(.:format)      users#destroy
+#    search GET    /search(.:format)         users#index
