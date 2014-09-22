@@ -38,6 +38,10 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+gem 'typhoeus'
+gem 'twitter'
+
 # debug and password reset
 group :development do
   gem 'pry'
@@ -52,4 +56,3 @@ group :development do
   gem 'ffaker'
 end
 
-gem 'typhoeus'

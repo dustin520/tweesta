@@ -9,6 +9,8 @@
 
 
 kevin = User.create({email: "kevin@gmail.com", first_name: "Kevin", last_name: "Chou"})
+dustin = User.create({email: "dustin@gmail.com", first_name: "Dustin", last_name: "Yu"})
 
 tag = kevin.tags.create({hashtags: "coffee"})
 # kevin << Tag.create({hashtags: "tea"})
+tag = dustin.tags.create({hashtags: "tea"})
