@@ -49,11 +49,13 @@ group :development do
   # gem 'letter-opener'
 end
 
-# testing and seed data 
+# testing and seed data
 group :development do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'factory_girl_rails'
   gem 'ffaker'
-end 
+end
 
-
+group :development, :test do
+  gem 'dotenv-rails'
+end

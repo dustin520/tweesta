@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    
+
   end
 
   def results
@@ -59,6 +59,10 @@ class UsersController < ApplicationController
 
     # puts @results
     # puts @tags
+
+  end
+
+  def search
 
   end
 
