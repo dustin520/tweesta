@@ -1,8 +1,13 @@
 class UsersController < ApplicationController
   def index
+
   end
 
   def create
+  end
+
+  def search
+
   end
 
   def show
