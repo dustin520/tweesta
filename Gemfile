@@ -38,3 +38,17 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# debug and password reset
+group :development do
+  gem 'pry'
+  gem 'pry-rails'
+  # gem 'letter-opener'
+end
+
+# testing and seed data 
+group :development do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+end 
+
