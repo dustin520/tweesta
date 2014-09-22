@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+kevin = User.create({email: "kevin@gmail.com", first_name: "Kevin", last_name: "Chou"})
+
+tag = kevin.tags.create({hashtags: "coffee"})
+# kevin << Tag.create({hashtags: "tea"})
