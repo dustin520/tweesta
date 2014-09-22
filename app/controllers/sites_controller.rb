@@ -14,6 +14,11 @@ class SitesController < ApplicationController
   end
 
   def search
+    
+    @tag = params[:tag]
+    puts "***** TAG *******"
+    p @tag
+
     # TWITTER API CALL 
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV['TWITTER_KEY']
@@ -22,24 +27,24 @@ class SitesController < ApplicationController
       config.access_token_secret = ENV['TWITTER_TOKEN_SECRET']
     end
 
-    @twitter_results = client.search("#coffee -rt", :lang => "en")
-
-    p @twitter_results
+    @twitter_results = client.search("\##{@tag} -rt", :lang => "en")
 
     # INSTAGRAM API CALL
-    @tag = params[:tag]
 
     @token = ENV['INSTAGRAM_TOKEN']
       request = Typhoeus.get(
-        "https://api.instagram.com/v1/tags/#{:coffee}/media/recent?access_token=#{@token}",
+        "https://api.instagram.com/v1/tags/#{@tag}/media/recent?access_token=#{@token}",
         :params => {:name => @tag}
       )
 
     @results = JSON.parse(request.body)["data"]
-    puts @results
 
-    respond_with @results
-    respond_with @twitter_results
+    @all_results = {
+      :instagram => @results,
+      :twitter => @twitter_results
+    }
+
+    respond_with @all_results
 
   end
 
