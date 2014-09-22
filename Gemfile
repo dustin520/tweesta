@@ -56,3 +56,7 @@ group :development do
   gem 'ffaker'
 end
 
+group :development, :test do
+  gem 'dotenv-rails'
+
+end

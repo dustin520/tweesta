@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
   def index
 
-<<<<<<< HEAD
-=======
+
     # # TWITTER GEM METHOD
     # client = Twitter::REST::Client.new do |config|
     #   config.consumer_key        = ENV['TWITTER_KEY']
@@ -15,7 +14,7 @@ class UsersController < ApplicationController
 
     # p @results
 
-    # INSTAGRAM 
+    # INSTAGRAM
     @tag = params[:tag]
 
     @token = ENV['INSTAGRAM_TOKEN']
@@ -28,11 +27,10 @@ class UsersController < ApplicationController
     puts @results
 
 
->>>>>>> 219a3c345ac95ae10de9ec837ed9015c10dec378
   end
 
   def create
-    
+
   end
 
   def results
