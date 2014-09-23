@@ -14,6 +14,10 @@
       </form>
   </div>
 
+  <div class="row">
+    <button ng-click="tweestas.loadMore(newTag)" ng-model="newTag" class="col-md-offset-4 col-md-4 text-center btn btn-info">For More</button>
+  </div>
+
   <div class="container">
     
     <div class="row col-md-6">
@@ -23,20 +27,49 @@
         <ul ng-repeat="tweet in tweestas.results.twitter">
           <p>{{tweet.text}}</p>
         </ul>
+<!-- 
+        <ul ng-repeat="tweet in tweestas.saved[0].twitter">
+          <p>{{tweet.text}}</p>
+        </ul>
+
+        <ul ng-repeat="tweet in tweestas.saved[1].twitter">
+          <p>{{tweet.text}}</p>
+        </ul>
+
+        <ul ng-repeat="tweet in tweestas.saved[2].twitter">
+          <p>{{tweet.text}}</p>
+        </ul> -->
 
     </div>
 
     <div class="row col-md-6">
       
         <h1>INSTAGRAM PHOTOS</h1>
-
+<!-- 
         <ul ng-repeat="photo in tweestas.results.instagram">
+          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
+        </ul> -->
+
+        <!-- <ul ng-repeat="photo in tweestas.saved">
+          <img src="{{photo.instagram.images.low_resolution.url}}" alt="instagram photo">
+        </ul> -->
+
+        <ul ng-repeat="photo in tweestas.saved[0].instagram">
           <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
         </ul>
         
+        <ul ng-repeat="photo in tweestas.saved[1].instagram">
+          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
+        </ul>
+
+        <ul ng-repeat="photo in tweestas.saved[2].instagram">
+          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
+        </ul>
+
     </div>
 
   </div>
+
 
 
 </div>
