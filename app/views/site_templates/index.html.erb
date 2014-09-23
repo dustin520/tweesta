@@ -6,6 +6,9 @@
     <h1>Welcome to Tweesta <h3>Find photos and tweets with the same tag</h3></h1>
   </div>
 
+
+  <hr class="divider-featurette">
+
   <div class="row text-center col-md-offset-3 col-md-6">
 
       <form ng-submit="tweestas.searchTag(newTag)">
@@ -19,22 +22,30 @@
 
   <div class="row">
     <button ng-click="tweestas.loadMore(newTag)" ng-model="newTag" class="col-md-offset-4 col-md-4 text-center btn btn-info">For More</button>
+  </div><br>
+
+  <!-- DISPLAY TAGS -->
+  <div class="row col-md-offset-3 col-md-6 text-center tagsBackground id="tagArea"">
+    <span class="col-md-offset-3 col-md-6 text-center" ng-repeat="tags in tweestas.tagArray">
+      <button class="tagsDisplay" id="tagButton" ng-click="tweestas.searchTag()" style="cursor:pointer">{{tags}}</button>
+    </span>
   </div>
+
+  <br>
 
   <div class="container">
 
 
-    <div class="row col-md-4">
-
+      <div class="row col-md-6">
+        <!-- DISPLAY TWEETS -->
         <h1 class="text-center">TWITTER TWEETS</h1>
-
        <ul ng-repeat="saved in tweestas.saved">
-          <blockquote ng-repeat="obj in saved.twitter">
+          <blockquote class="col-md-6" ng-repeat="obj in saved.twitter">
             {{obj.text}}{{$index}}
           </blockquote>
         </ul>
 
-    </div>
+      </div>
 
     <div class="row col-md-6">
 
@@ -43,9 +54,9 @@
 
         <ul ng-repeat="save in tweestas.saved">
           <ul ng-repeat="obj in save.instagram">
-            <div class="thumbnail col-md-6">
-              <img src="{{obj.images.low_resolution.url}}" alt="instagram photo" class="img-responsive img-rounded">
-              <p class="caption">{{obj.caption.text}}</p>
+            <div class="thumbnail col-md-4">
+              <img src="{{obj.images.low_resolution.url}}" height="300px" width="300px" alt="instagram photo" class="img-responsive img-rounded">
+              <!-- <p class="caption" height="100px" width="100px">{{obj.caption.text}}</p> -->
             </div>
           </ul>
         </ul>
