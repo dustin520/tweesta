@@ -1,8 +1,21 @@
-{{tweestas.greeting}}
+
 
 <form ng-submit="tweestas.searchTag(newTag)">
   <input type="text" ng-model="newTag" autofocus required placeholder="Search tags">
   <button>Search</button>
 </form>
 
-{{tweestas.results}}
+
+  <ul ng-repeat="photo in tweestas.results.instagram">
+    <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
+  </ul>
+  
+
+<hr> <h1>TWEETS</h1> <hr>
+
+
+  <ul ng-repeat="tweet in tweestas.results.twitter">
+    <p>{{tweet.text}}</p>
+  </ul>
+
+
