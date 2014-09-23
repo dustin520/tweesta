@@ -1,13 +1,13 @@
 
 
 <div class="container">
-  
+
   <div class>
     <h1>Welcome to Tweesta</h1>
   </div>
 
   <div class="row text-center col-md-offset-3 col-md-6">
-    
+
       <form ng-submit="tweestas.searchTag(newTag)">
         <input type="text" ng-model="newTag" autofocus required placeholder="Search tags" class="form-control text-center">
         <button class="form-control btn btn-primary">Search</button>
@@ -19,52 +19,31 @@
   </div>
 
   <div class="container">
-    
+
+    <div clas="row">
+    </div>
     <div class="row col-md-6">
-        
-        <h1>TWITTER TWEETS</h1> 
-      
-        <ul ng-repeat="tweet in tweestas.results.twitter">
-          <p>{{tweet.text}}</p>
-        </ul>
-<!-- 
-        <ul ng-repeat="tweet in tweestas.saved[0].twitter">
-          <p>{{tweet.text}}</p>
-        </ul>
 
-        <ul ng-repeat="tweet in tweestas.saved[1].twitter">
-          <p>{{tweet.text}}</p>
-        </ul>
+        <h1>TWITTER TWEETS</h1>
 
-        <ul ng-repeat="tweet in tweestas.saved[2].twitter">
-          <p>{{tweet.text}}</p>
-        </ul> -->
+          <ul ng-repeat="save in tweestas.saved">
+            <li ng-repeat="obj in save.twitter">
+              {{obj.text}} {{$index}}
+            </li>
+          </ul>
 
     </div>
 
     <div class="row col-md-6">
-      
+
         <h1>INSTAGRAM PHOTOS</h1>
-<!-- 
-        <ul ng-repeat="photo in tweestas.results.instagram">
-          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
-        </ul> -->
 
-        <!-- <ul ng-repeat="photo in tweestas.saved">
-          <img src="{{photo.instagram.images.low_resolution.url}}" alt="instagram photo">
-        </ul> -->
-
-        <ul ng-repeat="photo in tweestas.saved[0].instagram">
-          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
-        </ul>
-        
-        <ul ng-repeat="photo in tweestas.saved[1].instagram">
-          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
-        </ul>
-
-        <ul ng-repeat="photo in tweestas.saved[2].instagram">
-          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
-        </ul>
+          <ul ng-repeat="save in tweestas.saved">
+            <li ng-repeat="obj in save.instagram">
+              <img src="{{obj.images.low_resolution.url}}">
+              <p>{{obj.caption.text}}</p>
+            </li>
+          </ul>
 
     </div>
 
