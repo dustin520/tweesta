@@ -27,7 +27,7 @@ class SitesController < ApplicationController
       config.access_token_secret = ENV['TWITTER_TOKEN_SECRET']
     end
 
-    @twitter_results = client.search("\##{@tag} -rt", :lang => "en").take(11)
+    @twitter_results = client.search("\##{@tag} -rt", :lang => "en").take(16)
 
     # INSTAGRAM API CALL
 

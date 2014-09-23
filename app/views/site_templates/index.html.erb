@@ -27,6 +27,18 @@
         <ul ng-repeat="tweet in tweestas.results.twitter">
           <p>{{tweet.text}}</p>
         </ul>
+<!-- 
+        <ul ng-repeat="tweet in tweestas.saved[0].twitter">
+          <p>{{tweet.text}}</p>
+        </ul>
+
+        <ul ng-repeat="tweet in tweestas.saved[1].twitter">
+          <p>{{tweet.text}}</p>
+        </ul>
+
+        <ul ng-repeat="tweet in tweestas.saved[2].twitter">
+          <p>{{tweet.text}}</p>
+        </ul> -->
 
     </div>
 
@@ -38,10 +50,22 @@
           <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
         </ul> -->
 
+        <!-- <ul ng-repeat="photo in tweestas.saved">
+          <img src="{{photo.instagram.images.low_resolution.url}}" alt="instagram photo">
+        </ul> -->
+
         <ul ng-repeat="photo in tweestas.saved[0].instagram">
           <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
         </ul>
         
+        <ul ng-repeat="photo in tweestas.saved[1].instagram">
+          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
+        </ul>
+
+        <ul ng-repeat="photo in tweestas.saved[2].instagram">
+          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
+        </ul>
+
     </div>
 
   </div>
