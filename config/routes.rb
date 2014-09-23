@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get '/search', to: 'sites#search'
+  post '/search', to: 'sites#search'
   
 
   root 'sites#index'
