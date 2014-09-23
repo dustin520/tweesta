@@ -3,7 +3,7 @@ TweestaRouter = angular.module("TweestaRouter", [
 ])
 
 class Router
-  
+
   constructor: (@routeProvider, @locationProvider)->
     console.log("Initialized Router")
     console.log("Setting Up")
