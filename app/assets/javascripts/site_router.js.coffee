@@ -12,6 +12,11 @@ class Router
         templateUrl: "/site_templates",
         controller: "TweestasCtrl as tweestas"
 
+    # @routeProvider
+    #   .when "/about",
+    #     templateUrl: "/about_templates"
+    #     controller: "AboutsCtrl as abouts"
+
 
     @locationProvider.html5Mode(true)
 
