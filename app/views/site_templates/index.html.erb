@@ -1,21 +1,42 @@
 
 
-<form ng-submit="tweestas.searchTag(newTag)">
-  <input type="text" ng-model="newTag" autofocus required placeholder="Search tags">
-  <button>Search</button>
-</form>
-
-
-  <ul ng-repeat="photo in tweestas.results.instagram">
-    <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
-  </ul>
+<div class="container">
   
+  <div class>
+    <h1>Welcome to Tweesta</h1>
+  </div>
 
-<hr> <h1>TWEETS</h1> <hr>
+  <div class="row text-center col-md-12">
+    
+      <form ng-submit="tweestas.searchTag(newTag)">
+        <input type="text" ng-model="newTag" autofocus required placeholder="Search tags" class="form-control text-center">
+        <button class="form-control btn btn-primary">Search</button>
+      </form>
+  </div>
+
+  <div class="container">
+    
+    <div class="row col-md-6">
+        
+        <h1>TWITTER TWEETS</h1> 
+      
+        <ul ng-repeat="tweet in tweestas.results.twitter">
+          <p>{{tweet.text}}</p>
+        </ul>
+
+    </div>
+
+    <div class="row col-md-3">
+      
+        <h1>INSTAGRAM PHOTOS</h1>
+
+        <ul ng-repeat="photo in tweestas.results.instagram">
+          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo">
+        </ul>
+        
+    </div>
+
+  </div>
 
 
-  <ul ng-repeat="tweet in tweestas.results.twitter">
-    <p>{{tweet.text}}</p>
-  </ul>
-
-
+</div>
