@@ -10,6 +10,7 @@ class TweestasCtrl
   # sayHello: ()->
   # "Hello There Again!!"
 
+  # AJAX call to API
   searchTag: (newTag)->
     console.log(newTag)
     @Tweesta.lookUp(newTag)
@@ -17,7 +18,7 @@ class TweestasCtrl
     .success (data) =>
       @tagArray.push("#" + newTag)
       # console.log("tagarray: " + @tagArray)
-      
+
       console.log("data", data)
       @results = data
       @saved.push(@results)
@@ -26,7 +27,7 @@ class TweestasCtrl
       # console.log("newTag " + newTag)
 
 
-
+  # AJAX call to API again for more DATA
   loadMore: (newTag) ->
     @Tweesta.lookUp(newTag)
     .success (data) =>
@@ -35,9 +36,6 @@ class TweestasCtrl
       @saved.push(@results)
       console.log("saved:" + @saved)
       console.log(@saved)
-
-  saveTag: (pushTag) -> 
-    @tagArray.push.$scope(pushTag)
 
 
 
