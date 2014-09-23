@@ -16,12 +16,18 @@
 
   <div class="row">
     <button ng-click="tweestas.loadMore(newTag)" ng-model="newTag" class="col-md-offset-4 col-md-4 text-center btn btn-info">For More</button>
+  </div><br>
+
+  <!-- DISPLAY TAGS -->
+  <div class="row col-md-offset-3 col-md-6 text-center tagsBackground">
+    <span class="col-md-offset-3 col-md-6 text-center" ng-repeat="tags in tweestas.tagArray">
+      <button class="tagsDisplay" ng-click="tweestas.searchTag()">{{tags}}</button>
+    </span>
   </div>
 
   <div class="container">
 
-    
-    <div class="row col-md-4">
+      <div class="row col-md-4">
         
         <h1 class="text-center">TWITTER TWEETS</h1> 
 

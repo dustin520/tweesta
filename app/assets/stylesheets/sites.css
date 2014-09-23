@@ -5,3 +5,12 @@ body {
 .footerMain {
   display: inline-block;
 }
+
+.tagsDisplay {
+  display: inline-block;
+  background-color: grey;
+}
+
+.tagsBackground { 
+  background-color: #397DB9;
+}
