@@ -13,10 +13,10 @@ class TweestasCtrl
     # console.log(newTag)
     @Tweesta.lookUp(newTag)
     .success (data) =>
-      # console.log(data)
+      console.log("data", data)
       @results = data
       @saved.push(@results)
-      # console.log("saved:" + @saved)
+      console.log("saved: ", @saved)
       # console.log(@saved)
 
       # console.log("newTag " + newTag)

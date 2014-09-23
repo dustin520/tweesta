@@ -20,51 +20,32 @@
 
   <div class="container">
     
-    <div class="row col-md-6">
+    <div class="row col-md-4">
         
         <h1 class="text-center">TWITTER TWEETS</h1> 
-      
-        <blockquote ng-repeat="tweet in tweestas.results.twitter">
-          <p>{{tweet.text}}</p>
-        </blockquote>
-<!-- 
-        <ul ng-repeat="tweet in tweestas.saved[0].twitter">
-          <p>{{tweet.text}}</p>
-        </ul>
 
-        <ul ng-repeat="tweet in tweestas.saved[1].twitter">
-          <p>{{tweet.text}}</p>
+       <ul ng-repeat="saved in tweestas.saved">
+          <blockquote ng-repeat="obj in saved.twitter">
+            {{obj.text}}{{$index}}
+          </blockquote>
         </ul>
-
-        <ul ng-repeat="tweet in tweestas.saved[2].twitter">
-          <p>{{tweet.text}}</p>
-        </ul> -->
 
     </div>
 
     <div class="row col-md-6">
       
         <h1 class="text-center">INSTAGRAM PHOTOS</h1>
-<!-- 
-        <ul ng-repeat="photo in tweestas.results.instagram">
-          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo" class="img-responsive img-rounded">
-        </ul> -->
 
-        <!-- <ul ng-repeat="photo in tweestas.saved">
-          <img src="{{photo.instagram.images.low_resolution.url}}" alt="instagram photo" class="img-responsive img-rounded">
-        </ul> -->
-
-        <ul ng-repeat="photo in tweestas.saved[0].instagram">
-          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo" class="img-responsive img-rounded">
+        <ul ng-repeat="save in tweestas.saved">
+          <ul ng-repeat="obj in save.instagram">
+            <div class="thumbnail col-md-6">
+              <img src="{{obj.images.low_resolution.url}}" alt="instagram photo" class="img-responsive img-rounded">
+              <p class="caption">{{obj.caption.text}}</p>
+            </div>
+          </ul>
         </ul>
         
-        <ul ng-repeat="photo in tweestas.saved[1].instagram">
-          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo" class="img-responsive img-rounded">
-        </ul>
 
-        <ul ng-repeat="photo in tweestas.saved[2].instagram">
-          <img src="{{photo.images.low_resolution.url}}" alt="instagram photo" class="img-responsive img-rounded">
-        </ul>
 
     </div>
 
