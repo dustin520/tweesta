@@ -9,10 +9,11 @@ class TweestasCtrl
   # "Hello There Again!!"
 
   searchTag: (newTag)->
-  console.log(newTag)
-  @Tweesta.lookUp(newTag)
-  .success (data) ->
-    console.log(data)
+    console.log(newTag)
+    @Tweesta.lookUp(newTag)
+    .success (data) =>
+      # console.log(data)
+      @results = data
 
 
 TweestaControllers.controller("TweestasCtrl", ["$scope", "Tweesta", TweestasCtrl])

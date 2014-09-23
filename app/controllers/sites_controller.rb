@@ -43,8 +43,8 @@ class SitesController < ApplicationController
       :instagram => @results,
       :twitter => @twitter_results
     }
-
-    respond_with @all_results
+    puts @all_results
+    render json: @all_results
 
   end
 
