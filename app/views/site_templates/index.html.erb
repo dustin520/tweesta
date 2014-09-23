@@ -3,13 +3,13 @@
 <div class="container">
 
   <div class>
-    <h1>Welcome to Tweesta</h1>
+    <h1>Welcome to Tweesta <h3>Find photos and tweets with the same tag</h3></h1>
   </div>
 
   <div class="row text-center col-md-offset-3 col-md-6">
 
       <form ng-submit="tweestas.searchTag(newTag)">
-        <input type="text" ng-model="newTag" autofocus required placeholder="Search tags" class="form-control text-center">
+        <input type="text" ng-model="newTag" autofocus required placeholder="Search by tag" class="form-control text-center">
         <button class="form-control btn btn-primary">Search</button>
       </form>
   </div>
@@ -24,6 +24,7 @@
     </div>
     <div class="row col-md-6">
 
+
         <h1>TWITTER TWEETS</h1>
 
           <ul ng-repeat="save in tweestas.saved">
@@ -32,9 +33,11 @@
             </li>
           </ul>
 
+
     </div>
 
     <div class="row col-md-6">
+
 
         <h1>INSTAGRAM PHOTOS</h1>
 
