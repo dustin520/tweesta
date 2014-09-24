@@ -2,5 +2,6 @@ angular.module("TweestaApp", [
   "TweestaRouter",
   "TweestaControllers",
   "TweestaFactories"
-  # "UsersController"
+  "UserRouter",
+  "UserControllers"
 ])
