@@ -1,5 +1,8 @@
 class UserTemplatesController < ApplicationController
-  layout false
+  layout :false
   def index
+  end
+
+  def new
   end
 end
