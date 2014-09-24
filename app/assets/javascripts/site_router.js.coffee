@@ -17,6 +17,10 @@ class Router
         templateUrl: "/about_templates"
         controller: "AboutsCtrl as abouts"
 
+    @routeProvider
+      .when "/contact",
+        templateUrl: "/contact_templates"
+        controller: "ContactsCtrl as contacts"
 
     @locationProvider.html5Mode(true)
 

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'about_templates/index'
-
   # root 'users#index'
 
   resources :tags
@@ -15,9 +13,8 @@ Rails.application.routes.draw do
   resources :sites, except: [:new, :edit]
 
   resources :site_templates
-
-  # resources :abouts
   resources :about_templates
+  resources :contact_templates
 
   match "*path", to: "sites#index", via: "get"
 
