@@ -1,5 +1,4 @@
-class AboutsController < ApplicationController
-
+class ContactsController < ApplicationController
   before_action :render_main_layout_if_format_html
 
   def index
@@ -12,5 +11,5 @@ class AboutsController < ApplicationController
       render "layouts/application"
     end
   end
-  
+
 end

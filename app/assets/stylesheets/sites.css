@@ -11,8 +11,9 @@ body {
 }
 
 .tagsDisplay {
-  display: inline-block;
   background-color: grey;
+  display: inline-block;
+  padding: 1.25em;
 }
 
 .tagsBackground { 
@@ -31,4 +32,9 @@ button#tagButton {
 #tagArea {
   border: 1px solid #444;
   border-radius: 10%;
+}
+
+#tweestaLogo {
+  width: 20px;
+  height: 20px;
 }
