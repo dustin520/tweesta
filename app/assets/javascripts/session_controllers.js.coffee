@@ -3,20 +3,21 @@ SessionControllers = angular.module("SessionControllers", [])
 
 class SessionsCtrl
 
-  constructor: (@scope, @location)->
+  constructor: (@scope, @http, @location)->
     @greeting = "hello session!"
 
   loginUser: (logUser) ->
-      console.log("login user", logUser)
-      alert "hi"
 
-  # createUser: (newUser) ->
-  #   console.log(newUser)
-  #   @http.post("/users.json", {user: newUser})
-  #   .success (data) =>
-  #     console.log("USER DATA", data)
-  #   @location.path("/")
+    console.log("login user", logUser)
+    @http.post("/login.json", {logUser: logUser})
+    .success (data) =>
+      console.log("sessions data",data)
+      logUser.email = ""
+      logUser.password = ""
+      console.log("success")
+    @location.path("/")
 
 
-SessionControllers.controller("SessionsCtrl", ["$scope", "$location", SessionsCtrl])
+
+SessionControllers.controller("SessionsCtrl", ["$scope","$http", "$location", SessionsCtrl])
 

@@ -11,13 +11,13 @@ class SessionsController < ApplicationController
     @user = User.authenticate(params[:user][:email], [:user][:password])
     if @user
       session[:user_id] = @user.id
-      # respond_with 
+      respond_with @user
     end
   end
 
   def destroy
     session[:user_id] = nil
-    respond_with nil 
+    respond_with nil
   end
 
 private

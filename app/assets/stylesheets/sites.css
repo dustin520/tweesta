@@ -20,16 +20,16 @@ body {
   padding: 1.25em;
 }
 
-.tagsBackground { 
+.tagsBackground {
   background-color: #FDFBF6;
 }
 
 button#tagButton {
   background:none!important;
-  border:none; 
+  border:none;
   padding:0!important;
   /*border is optional*/
-  // border-bottom:1px solid #444; 
+  // border-bottom:1px solid #444;
   cursor: pointer;
 }
 
@@ -42,7 +42,12 @@ button#tagButton {
   width: 20px;
   height: 20px;
 }
-
+.tagButton {
+  color: blue;
+  border: black;
+  background: red !important;
+  cursor: pointer;
+}
 
 .siteIcon:hover {
   background: yellow;
