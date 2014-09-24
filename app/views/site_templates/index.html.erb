@@ -22,9 +22,9 @@
   <br><br>
 
   <!-- DISPLAY TAGS -->
-  <div class="row col-md-offset-3 col-md-6 text-center tagsBackground id="tagArea"">Tags:
+  <div class="row col-md-offset-3 col-md-6 text-center tagsBackground id="tagArea"">
     <span class="text-center" ng-repeat="tags in tweestas.tagArray">
-      <button class="tagsDisplay" id="tagButton" ng-click="tweestas.searchTag(tags)" style="cursor:pointer">{{tags}}</button>
+      <button class="tagsDisplay tagButton" id="tagButton" ng-click="tweestas.searchTag(tags)">#{{tags}}</button>
     </span>
   </div>
 
