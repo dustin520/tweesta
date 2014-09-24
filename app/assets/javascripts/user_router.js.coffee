@@ -4,8 +4,8 @@ class Router
   constructor: (@routeProvider, @locationProvider) ->
 
     @routeProvider
-      .when "/users",
-        templateUrl: "/user_templates",
+      .when "/signup",
+        templateUrl: "/user_templates/new",
         controller: "UsersCtrl as users"
 
     @locationProvider.html5Mode(true)

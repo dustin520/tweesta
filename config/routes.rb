@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :user_templates
   resources :users
 
+  get '/signup', to: 'users#new'
+
   match "*path", to: "sites#index", via: "get"
 
 end

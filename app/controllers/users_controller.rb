@@ -6,9 +6,11 @@ class UsersController < ApplicationController
   end
 
   def new
+    
   end
 
   def create
+    @user = User.create(user_params)
 
   end
 
@@ -23,6 +25,15 @@ class UsersController < ApplicationController
 
 
   private
+
+  def user_params
+    params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation)
+  end
+
+  def find_user
+    @user = User.find(params[:id])
+  end
+
 
   def render_main_layout_if_format_html
     if request.format.symbol == :html
