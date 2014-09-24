@@ -1,19 +1,14 @@
 class UsersController < ApplicationController
-
   def index
-
   end
 
   def new
-    
   end
 
   def create
-
   end
 
-  def show
-
+  def edit
   end
 
   def update
