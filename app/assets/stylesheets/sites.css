@@ -10,6 +10,10 @@ body {
   display: inline-block;
 }
 
+.topBackground {
+  background: ('url:https://unsplash.imgix.net/43/2EsHHwmRswlLYnaG07Ew_paris-motionbug.com.jpg?q=75&fm=jpg&auto=format&s=c22d69c3e48f5437b7c60152f43e9eb7');
+}
+
 .tagsDisplay {
   background-color: grey;
   display: inline-block;
@@ -40,6 +44,6 @@ button#tagButton {
 }
 
 
-.siteIcon {
+.siteIcon:hover {
   background: yellow;
 }
