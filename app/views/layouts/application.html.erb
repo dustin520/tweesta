@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Tweesta</title>
+  <link rel="icon" href="/assets/images/instagram-twitter.png" type="image/x-icon">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -29,7 +30,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Tweesta</a>
+          <a class="navbar-brand" href="/">
+            <%= image_tag "instagram-twitter.png", id: "tweestaLogo"%>   Tweesta
+          </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
