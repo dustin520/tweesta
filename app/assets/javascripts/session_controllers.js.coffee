@@ -6,8 +6,9 @@ class SessionsCtrl
   constructor: (@scope, @location)->
     @greeting = "hello session!"
 
-    loginUser: (logUser) ->
+  loginUser: (logUser) ->
       console.log("login user", logUser)
+      alert "hi"
 
   # createUser: (newUser) ->
   #   console.log(newUser)
