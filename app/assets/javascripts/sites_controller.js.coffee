@@ -7,6 +7,7 @@ class TweestasCtrl
     @saved = []
     @tagArray = []
 
+
   # sayHello: ()->
   # "Hello There Again!!"
 
@@ -14,11 +15,9 @@ class TweestasCtrl
   searchTag: (newTag)->
     console.log(newTag)
     @Tweesta.lookUp(newTag)
-
     .success (data) =>
-      @tagArray.push("#" + newTag)
-      # console.log("tagarray: " + @tagArray)
-
+      @tagArray.push(newTag)
+      console.log("tagarray: " + @tagArray)
       console.log("data", data)
       @results = data
       @saved.push(@results)
@@ -36,7 +35,6 @@ class TweestasCtrl
       @saved.push(@results)
       console.log("saved:" + @saved)
       console.log(@saved)
-
 
 
 TweestaControllers.controller("TweestasCtrl", ["$scope", "Tweesta", TweestasCtrl])
