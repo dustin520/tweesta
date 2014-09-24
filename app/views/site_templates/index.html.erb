@@ -3,7 +3,7 @@
 <div class="container">
 
   <div class>
-    <h1 class="col-md-offset-1">Welcome to Tweesta <br><small class="col-md-offset-2"><em>Discover life around you through tagged tweets and photos</em></small></h1>
+    <h1 class="col-md-offset-1" id="topPage">Welcome to Tweesta <br><small class="col-md-offset-2"><em>Discover life around you through tagged tweets and photos</em></small></h1>
   </div>
 
 
@@ -36,7 +36,12 @@
 
       <div class="row col-md-6">
         <!-- DISPLAY TWEETS -->
-        <h2 class="text-center">TWITTER TWEETS</h2>
+        <h2 class="text-center">
+          <a href="https://twitter.com/">
+            <%= image_tag "twitter.png", height: '30px', width: '30px' %>
+          </a>
+          TWITTER TWEETS
+        </h2>
        <ul ng-repeat="saved in tweestas.saved">
           <blockquote class="col-md-6" ng-repeat="obj in saved.twitter">
             {{obj.text}}{{$index}}
@@ -48,7 +53,12 @@
     <div class="row col-md-6">
 
 
-        <h2 class="text-center">INSTAGRAM PHOTOS</h2>
+        <h2 class="text-center">
+          <a href="https://instagram.com">
+            <%= image_tag "instagram.png", height: '30px', width: '30px' %>
+          </a>
+          INSTAGRAM PHOTOS
+        </h2>
 
         <ul ng-repeat="save in tweestas.saved">
           <ul ng-repeat="obj in save.instagram">
@@ -66,8 +76,10 @@
   <!-- RE-RUN SEARCH FUNCTION, LOAD MORE -->
 
   <div class="row">
-    <button ng-click="tweestas.loadMore(newTag)" ng-model="newTag" class="col-md-offset-4 col-md-4 text-center btn btn-info">For More</button>
+    <button ng-click="tweestas.loadMore(newTag)" ng-model="newTag" class="col-md-offset-4 col-md-4 text-center btn btn-info">More</button>
   </div>
+    <a href="/" class="text-right col-md-offset-11"><i class="fa fa-arrow-circle-o-up fa-3x"></i></a>
+  
 
   </div>
 
