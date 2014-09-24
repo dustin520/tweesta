@@ -36,5 +36,9 @@ class TweestasCtrl
       console.log("saved:" + @saved)
       console.log(@saved)
 
+  # Clear all the images below
+  deleteTag: () ->
+    console.log(@saved)
+    @saved = []
 
 TweestaControllers.controller("TweestasCtrl", ["$scope", "Tweesta", TweestasCtrl])
