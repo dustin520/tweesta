@@ -8,6 +8,7 @@ class Router
         templateUrl: "/user_templates/new",
         controller: "UsersCtrl as users"
 
+
     @locationProvider.html5Mode(true)
 
 

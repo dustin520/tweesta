@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   before_action :render_main_layout_if_format_html
 
+  respond_to :json, :html
+
   def index
   end
 
@@ -10,8 +12,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-
+    respond_with User.create(user_params)
   end
 
   def edit
