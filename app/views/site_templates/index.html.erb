@@ -23,7 +23,7 @@
 
   <!-- DISPLAY TAGS -->
   <div class="row col-md-offset-3 col-md-6 text-center tagsBackground id="tagArea"">
-    <span class="text-center" ng-repeat="tags in tweestas.tagArray">
+    <span class="text-center" ng-repeat="tags in tweestas.tagArray track by $index">
       <button class="tagsDisplay tagButton" id="tagButton" ng-click="tweestas.searchTag(tags)">#{{tags}}</button>
     </span>
   </div>
@@ -41,8 +41,8 @@
           </a>
           TWITTER TWEETS
         </h2>
-       <ul ng-repeat="saved in tweestas.saved">
-          <blockquote class="col-md-6" ng-repeat="obj in saved.twitter">
+       <ul ng-repeat="saved in tweestas.saved track by $index">
+          <blockquote class="col-md-6" ng-repeat="obj in saved.twitter track by $index">
             {{obj.text}}{{$index}}
           </blockquote>
         </ul>
@@ -59,8 +59,8 @@
           INSTAGRAM PHOTOS
         </h2>
 
-        <ul ng-repeat="save in tweestas.saved">
-          <ul ng-repeat="obj in save.instagram">
+        <ul ng-repeat="save in tweestas.saved track by $index">
+          <ul ng-repeat="obj in save.instagram track by $index">
             <div class="thumbnail col-md-4">
               <img src="{{obj.images.low_resolution.url}}" height="300px" width="300px" alt="instagram photo" class="img-responsive img-rounded">
               <!-- <p class="caption" height="100px" width="100px">{{obj.caption.text}}</p> -->
@@ -78,7 +78,7 @@
     <button ng-click="tweestas.loadMore(newTag)" ng-model="newTag" class="col-md-offset-4 col-md-4 text-center btn btn-info">More</button>
   </div>
     <a href="/" class="text-right col-md-offset-11"><i class="fa fa-arrow-circle-o-up fa-3x"></i></a>
-  
+
 
   </div>
 
