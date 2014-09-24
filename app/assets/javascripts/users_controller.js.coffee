@@ -14,9 +14,6 @@ class UsersCtrl
 
 
 
-
-
-
 UserControllers.controller("UsersCtrl", ["$scope", "$http", "$location", UsersCtrl])
 
 

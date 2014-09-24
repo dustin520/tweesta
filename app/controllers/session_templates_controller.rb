@@ -1,5 +1,5 @@
 class SessionTemplatesController < ApplicationController
-  layout false 
-  def index
+  layout :false 
+  def new
   end
 end
