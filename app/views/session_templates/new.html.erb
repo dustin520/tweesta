@@ -4,7 +4,7 @@
   <h1 class='text-center'>Login</h1>
 
   <form ng-submit="sessions.loginUser(logUser)" class="col-md-offset-3 col-md-6 text-center">
-    <input type="text" ng-model="logUser.email" class="form-control" placeholder="email" required autofocus>
+    <input type="email" ng-model="logUser.email" class="form-control" placeholder="email" required autofocus>
     <input type="password" ng-model="logUser.password" class="form-control" required placeholder="password">
     <button class="btn btn-primary form-control">Submit</button>
   </form>
