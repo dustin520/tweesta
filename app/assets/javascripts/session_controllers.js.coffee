@@ -7,6 +7,7 @@ class SessionsCtrl
     @greeting = "hello session!"
 
   loginUser: (logUser) ->
+
     console.log("login user", logUser)
     @http.post("/login.json", {logUser: logUser})
     .success (data) =>
@@ -15,6 +16,7 @@ class SessionsCtrl
       logUser.password = ""
       console.log("success")
     @location.path("/")
+
 
 
 SessionControllers.controller("SessionsCtrl", ["$scope","$http", "$location", SessionsCtrl])

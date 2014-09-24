@@ -8,9 +8,11 @@
 
 
 
-kevin = User.create({email: "kevin@gmail.com", first_name: "Kevin", last_name: "Chou"})
-dustin = User.create({email: "dustin@gmail.com", first_name: "Dustin", last_name: "Yu"})
+kevin = User.create({email: "kevin@gmail.com", first_name: "Kevin", last_name: "Chou", password: "123456"})
+dustin = User.create({email: "dustin@gmail.com", first_name: "Dustin", last_name: "Yu", password: "123456"})
 
 tag = kevin.tags.create({hashtags: "coffee"})
+tag2 = kevin.tags.create({hashtags: "coke"})
 # kevin << Tag.create({hashtags: "tea"})
-tag = dustin.tags.create({hashtags: "tea"})
+tag3 = dustin.tags.create({hashtags: "tea"})
+tag4 = dustin.tags.create({hashtags: "sprite"})
