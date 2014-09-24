@@ -3,7 +3,7 @@
 <div class="container">
 
   <div class>
-    <h1>Welcome to Tweesta <small><em>Discover life around you through tagged tweets and photos</em></small></h1>
+    <h1 class="col-md-offset-1">Welcome to Tweesta <br><small class="col-md-offset-2"><em>Discover life around you through tagged tweets and photos</em></small></h1>
   </div>
 
 
@@ -34,7 +34,7 @@
 
       <div class="row col-md-6">
         <!-- DISPLAY TWEETS -->
-        <h1 class="text-center">TWITTER TWEETS</h1>
+        <h2 class="text-center">TWITTER TWEETS</h2>
        <ul ng-repeat="saved in tweestas.saved">
           <blockquote class="col-md-6" ng-repeat="obj in saved.twitter">
             {{obj.text}}{{$index}}
@@ -46,7 +46,7 @@
     <div class="row col-md-6">
 
 
-        <h1 class="text-center">INSTAGRAM PHOTOS</h1>
+        <h2 class="text-center">INSTAGRAM PHOTOS</h2>
 
         <ul ng-repeat="save in tweestas.saved">
           <ul ng-repeat="obj in save.instagram">

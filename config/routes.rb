@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get '/login', to: 'session#new'
+  # get '/login', to: 'session_templates#new'
 
-  post '/login', to: 'session#create'
+  post '/login', to: 'sessions#create'
 
-  post 'session/destroy', to: 'session#destroy' # take out later
+  post 'session/destroy', to: 'sessions#destroy' # take out later
 
 
   post '/search', to: 'sites#search'
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :contact_templates
   resources :user_templates
   resources :users
+  resources :session_templates
 
   get '/signup', to: 'users#new'
 
