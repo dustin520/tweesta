@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  get 'session_templates/index'
+
   get 'user_templates/index'
 
   get 'users/index'
