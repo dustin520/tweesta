@@ -4,7 +4,7 @@
   <h1 class='text-center'>Sign Up</h1>
 
   <form ng-submit="users.createUser(newUser)" class="col-md-offset-3 col-md-6 text-center">
-    <input type="text" ng-model="newUser.email" class="form-control" placeholder="email" required autofocus>
+    <input type="email" ng-model="newUser.email" class="form-control" placeholder="email" required autofocus>
     <input type="text" ng-model="newUser.first_name" class="form-control" required placeholder="firstname">
     <input type="text" ng-model="newUser.last_name" class="form-control" required placeholder="lastname">
     <input type="password" ng-model="newUser.password" class="form-control" required placeholder="password">
