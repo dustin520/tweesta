@@ -21,7 +21,7 @@ class TweestasCtrl
       console.log("data", data)
       @results = data
       @saved.push(@results)
-      console.log("saved: ", @saved)
+      console.log("saved array: ", @saved)
       # console.log(@saved)
       # console.log("newTag " + newTag)
 

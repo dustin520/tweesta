@@ -8,16 +8,27 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.authenticate(params[:user][:email], [:user][:password])
-    if @user
+    @user = User.authenticate(params[:user][:email], params[:user][:password])
+    
+    if @user 
       session[:user_id] = @user.id
-      respond_with @user
+      respond_to do |format|
+        format.json {render :json => @user, :only => [:first_name, :email, :id]}
+      end
+    else
+      render json: {}, status: 400
     end
   end
 
   def destroy
     session[:user_id] = nil
     respond_with nil
+  end
+
+  def logged_in_user
+    if session[:user_id]
+      render json: User.find_by_id(session[:user_id]), :only => [:first_name, :email, :id]
+    end
   end
 
 private
