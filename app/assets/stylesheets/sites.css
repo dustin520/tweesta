@@ -38,10 +38,13 @@ button#tagButton {
   width: 20px;
   height: 20px;
 }
-
 .tagButton {
   color: blue;
   border: black;
   background: red !important;
   cursor: pointer;
+}
+
+.siteIcon {
+  background: yellow;
 }

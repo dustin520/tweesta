@@ -8,3 +8,14 @@ div .ngscope #contactBackground {
   background-color: blue;*/
   /*background-image: url('subtle-texture.png');*/
 }
+
+
+ul.linkIcons {
+  display: inline-block;
+}
+
+ul.linkIcons:hover {
+  display: inline-block;
+  /*background-color: blue;*/
+}
+
