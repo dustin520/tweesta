@@ -3,3 +3,9 @@
 #topContainer {
   background: url('https://unsplash.imgix.net/reserve/m6rT4MYFQ7CT8j9m2AEC_JakeGivens%20-%20Sunset%20in%20the%20Park.JPG?q=75&fm=jpg&auto=format&s=0798c4e39d1acb580b25a93863dcae97') no-repeat fixed center;
 }
+
+
+.aboutContent {
+  /*border: 1px solid black;*/
+  /*margin: 10px;*/
+}

@@ -3,7 +3,7 @@
 <div class="container">
 
   <div class="topBackground jumbotron">
-    <h1 class="col-md-offset-1" id="topPage">Welcome to Tweesta <br><small class="col-md-offset-1"><em>Discover life around you through tagged tweets and photos</em></small></h1>
+    <h1 class="col-md-offset-1" id="topPage">Welcome to <i id="title">Tweesta</i> <br><small class="col-md-offset-1"><em>Discover life around you through tagged tweets and photos</em></small></h1>
   </div>
 
   <!-- <hr class="divider-featurette"> -->
@@ -27,9 +27,9 @@
       <!-- SEARCH FOR PHOTO AND TWEET BY TAG -->
         <form ng-submit="tweestas.searchTag(newTag)">
           <input type="text" ng-model="newTag" autofocus required placeholder="Search by tag" class="form-control text-center">
-          <button class="form-control btn btn-primary">Search</button>
+          <button class="form-control btn btn-primary" id="searchButton">Search</button>
         </form>
-          <button ng-click="tweestas.saveTag(newTag)" ng-show="renderContent" ng-model="newTag" class="btn form-control">Save Tag</button>
+          <button ng-click="tweestas.saveTag(newTag)" ng-show="renderContent" ng-model="newTag" class="btn form-control" id="saveTagButton">Save Tag</button>
           <button ng-show="renderContent" ng-click="tweestas.deleteTag()" class="form-control btn btn-success" id="clearButton">Clear all</button>
     </div>
   </div>
@@ -83,18 +83,16 @@
         </ul>
 
     </div>
-    <br>
+    <br><br><br>
 
   <!-- RE-RUN SEARCH FUNCTION, LOAD MORE -->
   <br><br>
   <div class="row" ng-show="renderContent">
     <button ng-click="tweestas.loadMore(newTag)" ng-model="newTag" class="col-md-offset-5 col-md-2 text-center btn btn-info" id="moreButton">More</button>
   </div>
-    <a href="/" class="text-right col-md-offset-11"><i class="fa fa-arrow-circle-o-up fa-3x"></i></a>
+    <a href="/" ng-show="renderContent" class="text-right col-md-offset-11"><i class="fa fa-arrow-circle-o-up fa-3x"></i></a>
 
 
   </div>
-
-
 
 </div>
