@@ -6,13 +6,22 @@
     <h1 class="col-md-offset-1" id="topPage">Welcome to Tweesta <br><small class="col-md-offset-1"><em>Discover life around you through tagged tweets and photos</em></small></h1>
   </div>
 
-
-  <hr class="divider-featurette">
-    <br><br>
+  <!-- <hr class="divider-featurette"> -->
+  <div>
+    <h3 class="col-md-12 text-center" ng-hide="showSearch">Try Now</h3>
+  </div>
   <div ng-model="tryNow" ng-hide="showSearch">
-    <button id="tryNowBtn" class="btn btn-primary col-md-offset-5 col-md-2" ng-click="tweestas.tryMe()">Try Now</button>
+    <button id="tryNowTwitter" class="btn btn-primary col-md-offset-4 col-md-2" ng-click="tweestas.tryMe()">
+      <%= image_tag "twitter.png", height: '40px', width: '40px' %>
+    </button>
+  </div>
+  <div ng-model="tryNow" ng-hide="showSearch">
+    <button id="tryNowBtn" class="btn btn-primary col-md-2" ng-click="tweestas.tryMe()">
+      <%= image_tag "instagram.png", height: '40px', width: '40px' %>
+    </button>
   </div>
 
+  <br><br>
   <div ng-show="tryNow">
     <div class="row text-center col-md-offset-3 col-md-6" ng-model="renderContent">
       <!-- SEARCH FOR PHOTO AND TWEET BY TAG -->
@@ -35,10 +44,9 @@
     </span>
   </div>
 
-
-  <br>
-
   <div class="container">
+
+
 
       <div class="row col-md-6" ng-show="renderContent">
         <!-- DISPLAY TWEETS -->

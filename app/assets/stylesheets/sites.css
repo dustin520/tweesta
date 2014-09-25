@@ -1,5 +1,9 @@
 div {
-  border: '1px solid red'
+  /*border: '1px solid red'*/
+}
+
+.navbar {
+  padding-top: 1em;
 }
 
 body {
@@ -59,19 +63,30 @@ div.topBackground.jumbotron {
 }
 
 
+/* BUTTONS AND HOVERS */
+
 #tryNowBtn {
   padding: 1.3em; 
-  background-color: #814E3D;
+  background-color: #60513E;
 }
 
 #tryNowBtn:hover {
   /*padding: 3em; */
   background-color: white;
-  color: #814E3D;
+  color: #60513E;
+}
+
+#tryNowTwitter {
+  padding: 1.3em;
+  background-color: white;
+}
+
+#tryNowTwitter:hover {
+  background-color: #428BCA;
 }
 
 #clearButton {
-  background-color: #814E3D;
+  background-color: #60513E;
   color: white;
 }
 
@@ -90,4 +105,14 @@ div.topBackground.jumbotron {
   padding: 1.3em;
   background-color: white;
   color: #814E3D;
+}
+
+#signUpBtn {
+  background-color: #F2EAE1;
+  color: white;
+}
+
+#signUpBtn:hover {
+  background-color: white;
+  color: #F2EAE1;
 }
