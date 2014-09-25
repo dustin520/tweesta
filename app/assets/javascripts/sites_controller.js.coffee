@@ -9,8 +9,9 @@ class TweestasCtrl
 
 
   # Show Search Bar
-  
-
+  tryMe: () ->
+    @scope.tryNow = true
+    @scope.showSearch = true
 
   # AJAX call to API
   searchTag: (newTag)->
