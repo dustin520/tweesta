@@ -8,9 +8,9 @@
 
 
   <hr class="divider-featurette">
-
+    <br><br>
   <div ng-model="tryNow" ng-hide="showSearch">
-    <button class="btn btn-primary col-md-offset-4 col-md-4" ng-click="tweestas.tryMe()">Try Now</button>
+    <button id="tryNowBtn" class="btn btn-primary col-md-offset-5 col-md-2" ng-click="tweestas.tryMe()">Try Now</button>
   </div>
 
   <div ng-show="tryNow">
@@ -20,8 +20,8 @@
           <input type="text" ng-model="newTag" autofocus required placeholder="Search by tag" class="form-control text-center">
           <button class="form-control btn btn-primary">Search</button>
         </form>
-          <button ng-click="tweestas.saveTag(newTag)" ng-model="newTag" class="btn form-control">Save Tag</button>
-          <button ng-click="tweestas.deleteTag()" class="form-control btn btn-success">Clear all</button>
+          <button ng-click="tweestas.saveTag(newTag)" ng-show="renderContent" ng-model="newTag" class="btn form-control">Save Tag</button>
+          <button ng-show="renderContent" ng-click="tweestas.deleteTag()" class="form-control btn btn-success" id="clearButton">Clear all</button>
     </div>
   </div>
 
@@ -78,9 +78,9 @@
     <br>
 
   <!-- RE-RUN SEARCH FUNCTION, LOAD MORE -->
-
+  <br><br>
   <div class="row" ng-show="renderContent">
-    <button ng-click="tweestas.loadMore(newTag)" ng-model="newTag" class="col-md-offset-4 col-md-4 text-center btn btn-info">More</button>
+    <button ng-click="tweestas.loadMore(newTag)" ng-model="newTag" class="col-md-offset-5 col-md-2 text-center btn btn-info" id="moreButton">More</button>
   </div>
     <a href="/" class="text-right col-md-offset-11"><i class="fa fa-arrow-circle-o-up fa-3x"></i></a>
 

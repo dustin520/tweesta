@@ -52,5 +52,6 @@ class TweestasCtrl
   deleteTag: () ->
     console.log(@saved)
     @saved = []
+    @scope.renderContent = false
 
 TweestaControllers.controller("TweestasCtrl", ["$scope", "Tweesta", "$http", "$routeParams", TweestasCtrl])

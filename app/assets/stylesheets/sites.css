@@ -57,3 +57,31 @@ button#tagButton {
 div.topBackground.jumbotron {
   background: url('https://unsplash.imgix.net/43/2EsHHwmRswlLYnaG07Ew_paris-motionbug.com.jpg?q=75&fm=jpg&auto=format&s=c22d69c3e48f5437b7c60152f43e9eb7') no-repeat fixed center;
 }
+
+
+#tryNowBtn {
+  padding: 1.3em; 
+  background-color: black;
+}
+
+#tryNowBtn:hover {
+  /*padding: 3em; */
+  background-color: white;
+  color: black;
+}
+
+#clearButton {
+  /*background-color: #E6D4B8;*/
+
+}
+
+#moreButton {
+  padding: 1.3em;
+  background-color: black;
+}
+
+#moreButton:hover {
+  padding: 1.3em;
+  background-color: white;
+  color: black;
+}
