@@ -61,27 +61,33 @@ div.topBackground.jumbotron {
 
 #tryNowBtn {
   padding: 1.3em; 
-  background-color: black;
+  background-color: #814E3D;
 }
 
 #tryNowBtn:hover {
   /*padding: 3em; */
   background-color: white;
-  color: black;
+  color: #814E3D;
 }
 
 #clearButton {
-  /*background-color: #E6D4B8;*/
-
+  background-color: #814E3D;
+  color: white;
 }
+
+#clearButton:hover {
+  background-color: black;
+  color: white;
+}
+
 
 #moreButton {
   padding: 1.3em;
-  background-color: black;
+  background-color: #814E3D;
 }
 
 #moreButton:hover {
   padding: 1.3em;
   background-color: white;
-  color: black;
+  color: #814E3D;
 }
