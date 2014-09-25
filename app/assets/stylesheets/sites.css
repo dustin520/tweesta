@@ -1,6 +1,3 @@
-div {
-  /*border: '1px solid red'*/
-}
 
 .navbar {
   padding-top: 1em;
@@ -23,7 +20,7 @@ body {
 .tagsBackground {
   background-color: #FDFBF6;
 }
-
+Ω™
 button#tagButton {
   background:none!important;
   border:none;
@@ -129,9 +126,18 @@ div.topBackground.jumbotron {
 #signUpBtn {
   background-color: #F2EAE1;
   color: white;
+  border-radius: 7%;
 }
 
 #signUpBtn:hover {
   background-color: white;
   color: #F2EAE1;
+}
+
+
+
+
+/* TESTING */
+div {
+  /*border: '1px solid red' !important*/
 }
