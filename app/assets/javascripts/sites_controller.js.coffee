@@ -7,6 +7,11 @@ class TweestasCtrl
     @saved = []
     @tagArray = []
 
+
+  # Show Search Bar
+  
+
+
   # AJAX call to API
   searchTag: (newTag)->
     console.log(newTag)
@@ -15,6 +20,7 @@ class TweestasCtrl
       @tagArray.push(newTag)
       # console.log("tagarray: " + @tagArray)
       # console.log("data", data)
+      @scope.renderContent = true
       @results = data
       @saved.push(@results)
       # console.log("saved array: ", @saved)
