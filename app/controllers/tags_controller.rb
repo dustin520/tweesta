@@ -6,7 +6,9 @@ class TagsController < ApplicationController
   end
 
   def create
-    
+    user_id = params[:user_id]
+    tag = params[:tag]
+    puts "called tags controller with " + user_id + " and " + tag + "!"
   end
 
   def show

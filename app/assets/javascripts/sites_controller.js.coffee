@@ -2,7 +2,7 @@ TweestaControllers = angular.module("TweestaControllers", [])
 
 class TweestasCtrl
 
-  constructor: (@scope, @Tweesta, @http, @routeParams)->
+  constructor: (@scope, @Tweesta, @http, @rootScope)->
     @greeting = "hello world!"
     @saved = []
     @tagArray = []
@@ -25,7 +25,7 @@ class TweestasCtrl
       @results = data
       @saved.push(@results)
       # console.log("saved array: ", @saved)
-      # console.log("routeParams", @routeParams)
+      # console.log("rootScope", @rootScope)
       # console.log(@saved)
       # console.log("newTag " + newTag)
 
@@ -41,12 +41,15 @@ class TweestasCtrl
 
   # Save tag in db for user
   saveTag: (newTag) ->
-    console.log("routeParams", @routeParams.id)
-    @http.get("/users/#{@routeParams.id}.json")
-    .success (data) => 
-      alert "hi routeParams"
-      console.log(data)
-    # @http.post("/users/#{@routeParams.id}.json", {tag: newTag})
+    console.log("rootScope.user", @rootScope.user)
+    user = @rootScope.user
+    if user
+      @http.post("/users/#{user.id}/tags", {tag: newTag})
+    #   @http.get("/users/#{user.id}.json")
+    # .success (data) => 
+    #   alert "hi after getting"
+    #   console.log(data)
+
 
   # Clear all the images below
   deleteTag: () ->
@@ -54,4 +57,4 @@ class TweestasCtrl
     @saved = []
     @scope.renderContent = false
 
-TweestaControllers.controller("TweestasCtrl", ["$scope", "Tweesta", "$http", "$routeParams", TweestasCtrl])
+TweestaControllers.controller("TweestasCtrl", ["$scope", "Tweesta", "$http", "$rootScope", TweestasCtrl])

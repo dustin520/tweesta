@@ -8,8 +8,10 @@ class SessionsController < ApplicationController
   end
 
   def create
+    puts "SessionsController#create"
     @user = User.authenticate(params[:user][:email], params[:user][:password])
-    
+    puts "user: "
+    p @user
     if @user 
       session[:user_id] = @user.id
       respond_to do |format|

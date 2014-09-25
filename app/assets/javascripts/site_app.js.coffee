@@ -17,7 +17,7 @@ main.controller "MainCtrl", ["$scope", "$http", "$rootScope", ($scope, $http, $r
     $http.get("/logged_in_user.json")
     .success (user)=>
       console.log "Welcome, ", user
-      $rootScope.current_user = user
+      $rootScope.user = user
 
 
   $rootScope.sign_out = () =>

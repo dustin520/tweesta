@@ -10,6 +10,7 @@ class SessionsCtrl
     console.log("login user", logUser)
     @http.post("/login.json", {user: logUser})
     .success (data) =>
+      @rootScope.user = data
     @location.path("/")
 
 
