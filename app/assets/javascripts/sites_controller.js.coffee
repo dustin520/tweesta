@@ -2,14 +2,10 @@ TweestaControllers = angular.module("TweestaControllers", [])
 
 class TweestasCtrl
 
-  constructor: (@scope, @Tweesta)->
+  constructor: (@scope, @Tweesta, @http, @routeParams)->
     @greeting = "hello world!"
     @saved = []
     @tagArray = []
-
-
-  # sayHello: ()->
-  # "Hello There Again!!"
 
   # AJAX call to API
   searchTag: (newTag)->
@@ -17,14 +13,14 @@ class TweestasCtrl
     @Tweesta.lookUp(newTag)
     .success (data) =>
       @tagArray.push(newTag)
-      console.log("tagarray: " + @tagArray)
-      console.log("data", data)
+      # console.log("tagarray: " + @tagArray)
+      # console.log("data", data)
       @results = data
       @saved.push(@results)
-      console.log("saved array: ", @saved)
+      # console.log("saved array: ", @saved)
+      # console.log("routeParams", @routeParams)
       # console.log(@saved)
       # console.log("newTag " + newTag)
-
 
   # AJAX call to API again for more DATA
   loadMore: (newTag) ->
@@ -36,9 +32,18 @@ class TweestasCtrl
       console.log("saved:" + @saved)
       console.log(@saved)
 
+  # Save tag in db for user
+  saveTag: (newTag) ->
+    console.log("routeParams", @routeParams.id)
+    @http.get("/users/#{@routeParams.id}.json")
+    .success (data) => 
+      alert "hi routeParams"
+      console.log(data)
+    # @http.post("/users/#{@routeParams.id}.json", {tag: newTag})
+
   # Clear all the images below
   deleteTag: () ->
     console.log(@saved)
     @saved = []
 
-TweestaControllers.controller("TweestasCtrl", ["$scope", "Tweesta", TweestasCtrl])
+TweestaControllers.controller("TweestasCtrl", ["$scope", "Tweesta", "$http", "$routeParams", TweestasCtrl])

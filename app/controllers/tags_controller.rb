@@ -6,6 +6,7 @@ class TagsController < ApplicationController
   end
 
   def create
+    
   end
 
   def show

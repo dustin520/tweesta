@@ -2,8 +2,8 @@
 
 <div class="container">
 
-  <div class="topBackground">
-    <h1 class="col-md-offset-1" id="topPage">Welcome to Tweesta <br><small class="col-md-offset-2"><em>Discover life around you through tagged tweets and photos</em></small></h1>
+  <div class="topBackground jumbotron">
+    <h1 class="col-md-offset-1" id="topPage">Welcome to Tweesta <br><small class="col-md-offset-1"><em>Discover life around you through tagged tweets and photos</em></small></h1>
   </div>
 
 
@@ -15,6 +15,7 @@
         <input type="text" ng-model="newTag" autofocus required placeholder="Search by tag" class="form-control text-center">
         <button class="form-control btn btn-primary">Search</button>
       </form>
+        <button ng-click="tweestas.saveTag(newTag)" ng-model="newTag" class="btn form-control">Save Tag</button>
         <button ng-click="tweestas.deleteTag()" class="form-control btn btn-success">Clear all</button>
   </div>
 

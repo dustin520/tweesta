@@ -18,12 +18,13 @@ Rails.application.routes.draw do
   resources :sites, except: [:new, :edit]
 
   resources :site_templates
-  resources :tags
+  resources :session_templates
   resources :about_templates
   resources :contact_templates
   resources :user_templates
-  resources :users
-  resources :session_templates
+  resources :users do 
+    resources :tags
+  end
 
   get '/signup', to: 'users#new'
 

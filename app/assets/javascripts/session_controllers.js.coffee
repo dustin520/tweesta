@@ -14,6 +14,6 @@ class SessionsCtrl
 
 
 
-SessionControllers.controller("SessionsCtrl", ["$scope","$http", "$location", "$rootScope", SessionsCtrl])
+SessionControllers.controller("SessionsCtrl", ["$scope", "$http", "$location", "$rootScope", SessionsCtrl])
 
 
