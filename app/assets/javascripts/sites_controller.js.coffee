@@ -50,5 +50,11 @@ class TweestasCtrl
     #   alert "hi after getting"
     #   console.log(data)
 
+  # Clear all the images below
+  deleteTag: () ->
+    console.log(@saved)
+    @saved = []
+    @scope.renderContent = false
+
 
 TweestaControllers.controller("TweestasCtrl", ["$scope", "Tweesta", "$http", "$rootScope", TweestasCtrl])

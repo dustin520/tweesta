@@ -42,7 +42,7 @@ button#tagButton {
 .tagButton {
   color: blue;
   border: black;
-  background: red !important;
+  background: #FDFBF6 !important;
   cursor: pointer;
 }
 
