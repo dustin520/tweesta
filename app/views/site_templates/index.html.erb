@@ -3,7 +3,7 @@
 <div class="container">
 
   <div class="topBackground jumbotron">
-    <h1 class="col-md-offset-1" id="topPage">Welcome to <i id="title">Tweesta</i> <br><small class="col-md-offset-1"><em>Discover life around you through tagged tweets and photos</em></small></h1>
+    <h1 class="col-md-offset-1" id="topPage">Welcome to <i id="title">Tweesta</i> <br><small class="col-md-offset-1"><em><a name="pageTop">Discover life around you through tagged tweets and photos</a></em></small></h1>
   </div>
 
   <!-- <hr class="divider-featurette"> -->
@@ -90,7 +90,7 @@
   <div class="row" ng-show="renderContent">
     <button ng-click="tweestas.loadMore(newTag)" ng-model="newTag" class="col-md-offset-5 col-md-2 text-center btn btn-info" id="moreButton">More</button>
   </div>
-    <a href="/" ng-show="renderContent" class="text-right col-md-offset-11"><i class="fa fa-arrow-circle-o-up fa-3x"></i></a>
+    <a href="#pageTop" ng-show="renderContent" class="text-right col-md-offset-11"><i class="fa fa-arrow-circle-o-up fa-3x"></i></a>
 
 
   </div>
